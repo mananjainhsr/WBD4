@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="assignment4.css" />
+    <script src="question2.js"></script>
+  </head>
+  <body>
+    <form
+      id="registration"
+      name="registration"
+      onsubmit="return formValidation();"
+      onreset="return resetfn();"
+      class="form-inline"
+    >
+      <div class="column left">
+        <div class="wrapper">
+          <div class="title">Registration Form</div>
+          <div class="form">
+            <div class="inputfield">
+              <label for="name1">Name</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label for="uid">IPM ID </label>
+              <input type="text" name="uid" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label for="phno">Phone Number</label>
+              <input type="number" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label for="email">Email</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label>Course</label>
+              <div class="custom_select">
+                <select>
+                  <option value="">Select</option>
+                  <option value="ipm">IPM</option>
+                  <option value="pgp">PGP</option>
+                  <option value="fpm">FPM</option>
+                </select>
+              </div>
+            </div>
+            <div class="inputfield">
+              <label>Phone Number</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label for="city">City</label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="inputfield">
+              <label>Address</label>
+              <textarea class="textarea" required></textarea>
+            </div>
+            <div class="inputfield">
+              <label for="zip">Postal Code</label>
+              <input type="number" class="input" required />
+            </div>
+            <div class="inputfield terms">
+              <label class="check">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <p>I agree to be a part of IIM R 🥲 😭</p>
+            </div>
+            <div class="inputfield">
+              <input
+                type="submit"
+                name="submit"
+                value="Submit"
+                class="submit"
+              />
+              <div><br /></div>
+              <input
+                type="reset"
+                name="reset"
+                value="Clear Form"
+                class="reset"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="akd">
+      <h2>Registration Options</h2>
+      <p><b>Register Online</b> using the form on this page</p>
+      <br />
+      <p>
+        <b>Visit our Office</b><br />
+        Suite 176, 15210 - 123 Avenue <br />
+        Edmonton
+      </p>
+      <br />
+      <p>
+        <b>Phone our Office</b><br />
+        Toll Free: (877) 455-6532 <br />
+        Locally: (780) 451-0526
+      </p>
+      <br />
+      <p>
+        NOTE: All registrations for any training in Calagry, Fort McMurray and
+        Edmonton are done through our main office in Edmonton, Monday - Friday,
+        8:00am - 4:00pm. Any registrations submitted after 4:00pm will not be
+        processed until the following business day
+      </p>
+      <p>
+        If you choose to "Walk in" for a course that is not during our regular
+        business hours, or have submitted your registration after 4pm, you will
+        need to pay full price for that course. Please submit your reciept and a
+        copy of the certificate to our Edmonton office for reimbursemnt. All
+        reimbursable amounts and policies apply.
+      </p>
+    </div>
+  </body>
+</html>
