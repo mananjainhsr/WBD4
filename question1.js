@@ -3,6 +3,8 @@ function formValidation()
 var emailadd = document.registration.email;
 if(ValidateEmail(emailadd))
 {
+  alert("Thank you for signing up with us");
+  document.getElementById("registration").reset();
 }
 return false;
 }
@@ -20,7 +22,5 @@ emailadd.focus();
 return false;
 }
 }
-function submitFn() {
-    alert("Thank you for signing up!");
-  }
+
 

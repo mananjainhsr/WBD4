@@ -13,31 +13,33 @@
   width: 50%;
 }
 
-.right {
+#right {
   width: 40%;
 }
 
 body {
-  background: #cf351a;
+  background: #fec107;
   padding: 0 10px;
 }
 
 .akd {
-  max-width: 500px;
-  width: 100%;
   background: #fff;
   margin: 30px auto;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
-  padding: 30px;
+  padding: 50px;
+  width: 100%;
+}
+
+.star{
+  color:red;
 }
 
 .wrapper {
-  max-width: 500px;
-  width: 100%;
+  width: 50%;
   background: #fff;
   margin: 30px auto;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
-  padding: 30px;
+  padding: 50px;
 }
 
 .wrapper .title {
@@ -181,3 +183,5 @@ body {
 .wrapper .form .inputfield:last-child {
   margin-bottom: 0;
 }
+
+

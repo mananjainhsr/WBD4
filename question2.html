@@ -11,31 +11,33 @@
       onreset="return resetfn();"
       class="form-inline"
     >
-      <div class="column left">
+      <div class="columnleft">
         <div class="wrapper">
-          <div class="title">Registration Form</div>
+          <div class="title">Course Registration Form</div>
+          <p><span class="star">*</span> Fields are mandatory</p>
+          <br>
           <div class="form">
             <div class="inputfield">
-              <label for="name1">Name</label>
-              <input type="text" class="input" required />
+              <label for="name1">Name: <span class="star">*</span></label>
+              <input type="text" class="input" id="name1" name="name1" required />
             </div>
             <div class="inputfield">
-              <label for="uid">IPM ID </label>
-              <input type="text" name="uid" class="input" required />
+              <label for="uid">IPM ID: <span class="star">*</span></label>
+              <input type="text" name="uid" class="input" id="uid" name="uid" required />
             </div>
             <div class="inputfield">
-              <label for="phno">Phone Number</label>
-              <input type="number" class="input" required />
+              <label for="phno">Phone Number: <span class="star">*</span></label>
+              <input type="number" class="input" required id="phno" name="phno" />
             </div>
             <div class="inputfield">
-              <label for="email">Email</label>
-              <input type="text" class="input" required />
+              <label for="email">Email: <span class="star">*</span></label>
+              <input type="text" class="input" id="email" name="email" required />
             </div>
             <div class="inputfield">
-              <label>Course</label>
+              <label>Course: <span class="star">*</span></label>
               <div class="custom_select">
-                <select>
-                  <option value="">Select</option>
+                <select name="course1">
+                  <option value="Default" name="Default" selected="">Select:</option>
                   <option value="ipm">IPM</option>
                   <option value="pgp">PGP</option>
                   <option value="fpm">FPM</option>
@@ -43,27 +45,23 @@
               </div>
             </div>
             <div class="inputfield">
-              <label>Phone Number</label>
-              <input type="text" class="input" required />
-            </div>
-            <div class="inputfield">
-              <label for="city">City</label>
-              <input type="text" class="input" required />
-            </div>
-            <div class="inputfield">
-              <label>Address</label>
+              <label>Address: <span class="star">*</span></label>
               <textarea class="textarea" required></textarea>
             </div>
             <div class="inputfield">
+              <label for="city">City: <span class="star">*</span></label>
+              <input type="text" class="input" required />
+            </div>
+            <div class="inputfield">
               <label for="zip">Postal Code</label>
-              <input type="number" class="input" required />
+              <input type="number" class="input" />
             </div>
             <div class="inputfield terms">
               <label class="check">
-                <input type="checkbox" />
+                <input type="checkbox" required/>
                 <span class="checkmark"></span>
               </label>
-              <p>I agree to be a part of IIM R 🥲 😭</p>
+              <p>I agree to all terms and conditions <span class="star">*</span></p>
             </div>
             <div class="inputfield">
               <input
@@ -83,8 +81,9 @@
           </div>
         </div>
       </div>
+    
     </form>
-    <div class="akd">
+    <div class="akd" id="right">
       <h2>Registration Options</h2>
       <p><b>Register Online</b> using the form on this page</p>
       <br />

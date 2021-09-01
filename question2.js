@@ -4,7 +4,7 @@ function formValidation()
     var uid = document.registration.uid;
     var phno = document.registration.phno;
     var email = document.registration.email;
-    var course1 = document.registration.course;
+    var course1 = document.registration.course1;
     if(nameValidation(name1,2,20))
     {
     if(unionidValidation(uid))
@@ -16,6 +16,7 @@ function formValidation()
     if(courseValidation(course1))
     {
         alert("Thanks for registering with us!");
+        document.getElementById("registration").reset();
     } 
     }
     }
@@ -28,7 +29,7 @@ function nameValidation(name1,mx,my){
     var name_len = name1.value.length;
 if (name_len == 0 || name_len >= my || name_len < mx)
 {
-alert("Length should be between "+mx+" to "+my);
+alert("Name length must be between "+mx+" to "+my);
 name1.focus();
 return false;
 }
@@ -37,9 +38,9 @@ return true;
 
 function unionidValidation(uid){
     var uid_len = uid.value.length;
-if (uid_len == 4)
+if (uid_len != 4)
 {
-alert("Length should be 4 digits (4+4)");
+alert("IPM ID should be 4 characters");
 uid.focus();
 return false;
 }
@@ -50,7 +51,7 @@ function phnoValidation(){
     var phno_len = phno.value.length;
     if (phno_len != 10)
     {
-    alert("Length should be 10 digits (4+4)");
+    alert("Phone Number must be 10 digits");
     uid.focus();
     return false;
     }
@@ -66,7 +67,7 @@ return true;
 }
 else
 {
-alert("You have entered an invalid email address!");
+alert("You have entered an invalid email address! Format must be abc@xyz.cde");
 email.focus();
 return false;
 }
@@ -74,9 +75,9 @@ return false;
 
 function courseValidation(course1)
 {
-if(course1.value == "Select")
+if(course1.value == "Default")
 {
-alert('Select the course you want from the list');
+alert('Select a course you want from the list');
 course1.focus();
 return false;
 }
@@ -90,7 +91,3 @@ function resetfn()
 {
     document.getElementById("registration").reset();
 }
-
-function submitFn() {
-    alert("Thank you for signing up!");
-  }

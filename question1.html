@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="assignment4.css" />
+    <script src="question1.js"></script>
+    
+  </head>
+  <body>
+    <form
+      id="registration"
+      name="registration"
+      onsubmit="return formValidation();"
+      onreset="return resetfn();"
+      class="form-inline"
+    >
+    <div class="wrapper">
+        <div class="title">Subscription Form</div>
+        <p><span class="star">*</span> Fields are mandatory</p>
+          <br>
+          <div class="form">
+            <div class="inputfield">
+              <label for="name1">First Name: </label>
+              <input type="text" class="input" name="firstname" required />
+            </div>
+            <div class="inputfield">
+              <label for="uid">Last Name: </label>
+              <input type="text" name="lastname" class="input" required />
+            </div>
+            <div class="inputfield">
+                <label for="email">Email: <span class="star">*</span></label>
+                <input type="text" class="input" name="email" required />
+              </div>
+              <div class="inputfield">
+                <input
+            type="submit"
+            name="submit"
+            value="Submit"
+            class="submit"
+          />
+<a href="question2.html" class="submit" style="text-align: center;">🔰Go to Q2</a>
+    </div>
+  </body>
+</html>
