@@ -5,6 +5,7 @@ function formValidation()
     var phno = document.registration.phno;
     var email = document.registration.email;
     var course1 = document.registration.course1;
+    var city = document.registration.city;
     if(nameValidation(name1,2,20))
     {
     if(unionidValidation(uid))
@@ -15,8 +16,10 @@ function formValidation()
     { 
     if(courseValidation(course1))
     {
+    if(cityValidation(city)){
         alert("Thanks for registering with us!");
         document.getElementById("registration").reset();
+    }  
     } 
     }
     }
@@ -27,11 +30,16 @@ function formValidation()
 
 function nameValidation(name1,mx,my){
     var name_len = name1.value.length;
-if (name_len == 0 || name_len >= my || name_len < mx)
-{
-alert("Name length must be between "+mx+" to "+my);
-name1.focus();
-return false;
+    var letters = /^[a-zA-Z]+$/;
+if(letters.test(name1.value)==false){
+    alert("Your name must be only in letters");
+    name1.focus();
+    return false;
+}
+if(name_len == 0 || name_len >= my || name_len < mx){
+    alert("Name length must be between "+mx+" to "+my);
+    name1.focus();
+    return false;   
 }
 return true;
 }
@@ -40,7 +48,7 @@ function unionidValidation(uid){
     var uid_len = uid.value.length;
 if (uid_len != 4)
 {
-alert("IPM ID should be 4 characters");
+alert("Reg ID should be 4 characters");
 uid.focus();
 return false;
 }
@@ -85,6 +93,18 @@ else
 {
 return true;
 }
+}
+
+function cityValidation(city){
+    var letters = /^[a-zA-Z]+$/;
+    if(letters.test(city.value)==false){
+        alert("City must be only in letters");
+        city.focus();
+        return false;
+    }
+    else{
+        return true;
+    } 
 }
 
 function resetfn()
