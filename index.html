@@ -14,18 +14,20 @@
     >
     <div class="wrapper">
         <div class="title">Subscription Form</div>
+        <p><span class="star">*</span> Fields are mandatory</p>
+          <br>
           <div class="form">
             <div class="inputfield">
-              <label for="name1">First Name</label>
+              <label for="name1">First Name: </label>
               <input type="text" class="input" name="firstname" required />
             </div>
             <div class="inputfield">
-              <label for="uid">Last Name </label>
+              <label for="uid">Last Name: </label>
               <input type="text" name="lastname" class="input" required />
             </div>
             <div class="inputfield">
-                <label for="email">Email</label>
-                <input type="text" class="input" name="email" required />
+                <label for="email">Email: <span class="star">*</span></label>
+                <input type="text" class="input" name="email" placeholder="abc@xyz.com" required />
               </div>
               <div class="inputfield">
                 <input
@@ -33,9 +35,8 @@
             name="submit"
             value="Submit"
             class="submit"
-            onclick="submitFn();"
           />
-<a href="question2.html" class="submit" style="text-align: center;">🔰Course Registration</a>
+<a href="question2.html" class="submit" style="text-align: center;">🔰Go to Q2</a>
     </div>
   </body>
 </html>
